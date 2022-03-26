@@ -1,0 +1,26 @@
+{
+  "name": "dotchain",
+  "version": "1.0.0",
+  "main": "./app",
+  "scripts": {
+    "test": "nodemon ./tests/block.js",
+    "t": "jest --watchAll",
+    "start": "node ./app",
+    "dev": "nodemon ./app",
+    "ext1": "HTTP_PORT=3002 P2P_PORT=5002 PEERS=ws://localhost:5001 yarn dev",
+    "ext2": "HTTP_PORT=3003 P2P_PORT=5003 PEERS=ws://localhost:5002,ws://localhost:5001 yarn dev"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "crypto-js": "^4.1.1",
+    "elliptic": "^6.5.4",
+    "express": "^4.17.3",
+    "uuid": "^8.3.2",
+    "ws": "^8.5.0"
+  }
+}
